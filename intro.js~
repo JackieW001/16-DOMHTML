@@ -1,0 +1,11 @@
+
+var addToList = function(e){
+    var 
+    document.createElement(
+};
+
+
+// click button to add element to list
+var button = document.getElementById('b');
+button.addEventListener('click', addToList );
+
