@@ -44,3 +44,28 @@ for (var i = 0; i < elements.length; i++) {
     elements[i].addEventListener('click', removeElement);
 }
 
+
+///*** ADDED STUFF
+function fibonacci(n) {
+    if (n == 0) { return 0; }
+    else if ( n == 1) { return 1; }
+    else {
+	return fibonacci(n-1) + fibonacci(n-2);
+    }
+};
+
+var ctr2 = 0;
+var addToOtherList = function(e){
+    var list = document.getElementById('theotherlist');
+    var x = list.appendChild( document.createElement('li') );
+    x.innerHTML = "Fib number: " + fibonacci(ctr2);
+    ctr2 += 1;
+
+    elements = document.getElementsByTagName('li');
+    for (var i = 0; i < elements.length; i++) {
+    	elements[i].addEventListener('click', removeElement);
+    }
+};
+
+var b2 = document.getElementById("b2");
+b2.addEventListener("click", addToOtherList);
